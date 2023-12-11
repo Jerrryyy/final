@@ -42,7 +42,7 @@
 
 ## Example Run-Through
 
-![Example Run-Through](./resources/example.mp4)
+https://github.com/Jerrryyy/final/assets/114617121/dc2451b3-3d94-479d-9f20-f3c6c082a96e
 
 If the video does not work, it can be found in [📂resources](./resources/) as [`🆘example.mp4`](./resources/example.mp4).
 
