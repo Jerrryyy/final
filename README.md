@@ -18,7 +18,7 @@
 **Assignment**: Final Project (Due December 13th, 2023)
 
 **Date Created**: 2023-11-20, 6:30 pm \
-**Last Modified**: 2023-12-11, 4:32 am
+**Last Modified**: 2023-12-11, 5:29 am
 
 <hr>
 
@@ -201,7 +201,7 @@ If using without this `conda` environment, these packages can be installed using
 
 ## Explanation of Analyses
 
-[Redfin], a real estate brokerage based in the United States, possesses direct access to data sourced from local multiple listing services, complemented by insights gleaned from their network of real estate agents nationwide. This unique access empowers them to provide the earliest and most dependable data regarding the state of the housing market. They excel in publishing existing industry data with remarkable speed, and they offer exclusive data pertaining to property tours and offers that remain unmatched by others. Individuals can easily visualize and download housing market data for various geographic scopes, including metropolitan areas, cities, neighbourhoods, and zip codes throughout the entire nation.
+[Redfin], a real estate brokerage based in the United States, possesses direct access to data sourced from multiple local listing services, complemented by insights gleaned from their network of real estate agents nationwide. This unique access empowers them to provide the earliest and most dependable data regarding the state of the housing market. They excel in publishing existing industry data with remarkable speed, and they offer exclusive data pertaining to property tours and offers that remain unmatched by others. Individuals can easily visualize and download housing market data for various geographic scopes, including metropolitan areas, cities, neighbourhoods, and zip codes throughout the entire nation.
 
 Understanding housing market analysis is of paramount importance, as it allows individuals and professionals to make informed decisions in the real estate sector. By harnessing the data provided by [Redfin], one can gain valuable insights into market trends, pricing dynamics, and property demand. This information empowers both buyers and sellers to make strategic choices. In the ever-evolving world of real estate, access to comprehensive and up-to-date market data is a valuable asset for making informed decisions.
 
