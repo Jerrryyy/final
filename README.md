@@ -27,6 +27,7 @@
 - [US Housing Market Analysis](#us-housing-market-analysis)
   - [Project Information](#project-information)
   - [Table of Contents](#table-of-contents)
+  - [Example Run-Through](#example-run-through)
   - [Project Structure](#project-structure)
   - [Program Flowchart](#program-flowchart)
   - [Program Instructions](#program-instructions)
@@ -36,6 +37,14 @@
     - [Diagnostic Analytics](#diagnostic-analytics)
     - [Predictive Analytics](#predictive-analytics)
     - [Prescriptive Analytics](#prescriptive-analytics)
+
+<hr>
+
+## Example Run-Through
+
+![Example Run-Through](./resources/example.mp4)
+
+If the video does not work, it can be found in [📂resources](./resources/) as [`🆘example.mp4`](./resources/example.mp4).
 
 <hr>
 
