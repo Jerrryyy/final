@@ -1,0 +1,7 @@
+,Statistic,p-value,Result,Post-Hoc
+median_sale_price,671.3731536976945,1.633698933574988e-146,***,Required
+total_homes_sold_with_price_drops,517.7932872701202,3.652719188076861e-113,***,Required
+median_new_listing_price,632.0381702628516,5.684014161803767e-138,***,Required
+inventory,927.1120790483172,4.788174635635332e-202,***,Required
+age_of_inventory,621.1467963025658,1.3173068706063595e-135,***,Required
+months_of_supply,693.3412867646362,2.7723786213329508e-151,***,Required
