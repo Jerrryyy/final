@@ -17,7 +17,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
 ![Flowchart](./resources/flowchart.svg)
 
 **Date Created**: 2023-12-11, 2:19 am \
-**Last Modified**: 2023-12-11, 4:29 am
+**Last Modified**: 2023-12-12, 6:39 pm
 
 [Back to Top](#api-for-us-housing-market-analysis)
 
@@ -253,7 +253,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
     - **Original Author**
       - Kai
     - **Description**
-      - Plotting longitudinal data for a variable vs. the national median.
+      - Plots longitudinal data for a variable vs. the national median.
     - **Inputs**
       - `city_data`: Cleaned housing data for a specific city in a `pandas` DataFrame.
       - `all_data`: Cleaned data for *all cities* in a `pandas` DataFrame.
@@ -328,7 +328,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
     - **Original Author**
       - Nargiz
     - **Description**
-      - Adds a column for years to a given DataFrame.
+      - Adds a column for years ("`Year`") to a given DataFrame.
     - **Inputs**
       - `data`: Cleaned housing data in a `pandas` DataFrame.
     - **Outputs**
@@ -390,6 +390,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
       - Nargiz
     - **Description**
       - Plots histograms of median days to close for each year.
+      - First histogram is a combined histogram for all years and each subsequent histogram is for each year.
     - **Inputs**
       - `data`: Cleaned housing data in a `pandas` DataFrame.
       - `save`: Boolean to save plots as `📊.svg` files.
@@ -402,7 +403,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
     - **Original Author**
       - Nargiz
     - **Description**
-      - Plots trends of median sale prices and total homes sold.
+      - Plots trends of median sale and listing prices and total homes sold.
     - **Inputs**
       - `data`: Cleaned housing data in a `pandas` DataFrame.
       - `save`: Boolean to save plots as `📊.svg` files.
@@ -430,7 +431,7 @@ Please refer to the flowchart below if unclear. There is also an example run-thr
     - **Original Author**
       - Nargiz
     - **Description**
-      - Trains a random forest model on given data.
+      - Trains a random forest regressor on given data.
       - Uses a train-test split of 7-3 and random state of 42 for both train-test splits and random forest model. Uses 100 estimators.
     - **Inputs**
       - `data`: Cleaned housing data in a `pandas` DataFrame.

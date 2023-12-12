@@ -15,7 +15,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-09, 10:55 am
+# Last Modified: 2023-12-12, 6:37 pm
 
 # File Description:
 
@@ -1313,7 +1313,7 @@ def divergence_plot(
     save: bool = False, 
     path: str = ""
 ) -> None:
-    """Plotting longitudinal data for a variable vs. the national median.
+    """Plots longitudinal data for a variable vs. the national median.
     
     Args: 
         city_data: Data for a specific city.

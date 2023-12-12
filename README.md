@@ -18,7 +18,7 @@
 **Assignment**: Final Project (Due December 13th, 2023)
 
 **Date Created**: 2023-11-20, 6:30 pm \
-**Last Modified**: 2023-12-11, 5:29 am
+**Last Modified**: 2023-12-12, 6:46 pm
 
 <hr>
 
@@ -44,7 +44,7 @@
 
 https://github.com/Jerrryyy/final/assets/114617121/dc2451b3-3d94-479d-9f20-f3c6c082a96e
 
-If the video does not work, it can be found in [📂resources](./resources/) as [`🆘example.mp4`](./resources/example.mp4).
+If the video does not work, it can be found in [`📂resources`](./resources/) as [`🆘example.mp4`](./resources/example.mp4).
 
 <hr>
 
@@ -231,7 +231,7 @@ Understanding housing market analysis is of paramount importance, as it allows i
 
 ### Prescriptive Analytics
 
-To better understanding market dynamics in Seattle, one can infer useful information from the output of its regression table (shown below). We can see that the variables selected have an adjusted R<sup>2</sup> of 0.944.
+To better understand market dynamics in Seattle, one can infer useful information from the output of its regression table (shown below). We can see that the variables selected have an adjusted R<sup>2</sup> of 0.944.
 
 ![Regression Results](./resources/regression_results.png)
 
@@ -245,5 +245,7 @@ To better understanding market dynamics in Seattle, one can infer useful informa
   - Third, `age_of_inventory` has a significantly negative correlation with home prices. Age of inventory is measured as the number of days active inventory has been on the market. As homes continue to stay on the market without being bought, this indicates demand is weaker than supply.
   - An interesting question arises: How can one reconcile the observations from the first and second point? The key takeaway is that housing prices benefit from stable availability of housing supply (which is measured by year-over-year change in total inventory). However, a sudden shock in new supply, which is measured by new listings during each time period (1-week in our analyzed dataset), causes a contemporaneous negative shock to home prices.
 - **Policy recommendation**: Given the backdrop in this analysis, policy recommendations should be two-fold. Policy should be aimed at improving affordability and maintaining home price stability. Therefore, Seattle should continue to expand available housing, increasing housing supply at a gradual pace, while closely monitoring any abnormal activity in particular areas of the market to avoid potential shocks to the system (either excessive aging of inventory, excessive popularity of certain cohorts, or sudden supply shocks). Furthermore, the city should also construct more buyer-friendly assistance programs, such as initiatives that provide lower cost loans for first-time homebuyers and deeper collaborations with banks and non-bank lenders to better understand the city's evolving demographics. The initiatives should be designed with the purpose to help boost transaction volumes, and serve as a good matching mechanism to help different buyers with different needs find appropriate homes.
+
+Prescriptive analytics for Miami can be found in [📄miami_summary.pdf](./resources/miami_summary.pdf), which includes an overview of all analyses done on the Miami housing market.
 
 [Redfin]: https://www.redfin.com/news/data-center/
