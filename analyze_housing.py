@@ -4,7 +4,6 @@
     # jerbear.li@mail.utoronto.ca, 
     # ky.xie@mail.utoronto.ca, 
     # nargiz.guliyeva@mail.utoronto.ca
-# Student Number: 1003070160 (Jerry)
 
 # Course: INF1340H (Programming for Data Science)
 # Professor: Dr. Maher Elshakankiri
@@ -15,7 +14,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-09, 10:15 am
+# Last Modified: 2023-12-12, 6:47 pm
 
 # File Description:
 
