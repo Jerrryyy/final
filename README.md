@@ -18,7 +18,7 @@
 **Assignment**: Final Project (Due December 13th, 2023)
 
 **Date Created**: 2023-11-20, 6:30 pm \
-**Last Modified**: 2023-12-12, 8:33 pm
+**Last Modified**: 2023-12-12, 8:36 pm
 
 <hr>
 
@@ -51,7 +51,11 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 ## Project Structure
 
 <details>
-  <summary>Click to expand project hierarchy</summary>
+  <summary>
+    <b>
+      Click here to expand project hierarchy
+    </b>
+  </summary>
 
 ```bash
 📦final
@@ -150,7 +154,6 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
     +-- 📄all_results.pdf
 ```
 
-  </summary>
 </details>
 
 <hr>
