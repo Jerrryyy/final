@@ -14,7 +14,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-12, 8:59 pm
+# Last Modified: 2023-12-12, 9:08 pm
 
 # File Description:
 
@@ -549,8 +549,8 @@ def main():
     # Seattle. Code for figure is under Kai's Analyses in my third weekly
     # update notebook.
     download(
-        "https://drive.google.com/uc?id=1i9jMrZJhmYLykBMABJJ0QVBIXa31lGB8",
-        output = "./results/seattle/prescriptive/regression_results.png",
+        "https://drive.google.com/uc?id=1nhVy2RhGhcKC7x_hp43FQTx-XAmga7jl",
+        output = "./results/seattle/prescriptive/regression.png",
         quiet = True
     )
     
