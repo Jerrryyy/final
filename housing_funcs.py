@@ -14,7 +14,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-12, 8:58 pm
+# Last Modified: 2023-12-12, 9:46 pm
 
 # File Description:
 
@@ -824,7 +824,7 @@ def fit_regression(
     """Fits a multiple linear regression model to predict sale price.
     
     Scales and centres data before fitting and plots predicted vs. 
-    actual sale price.
+    actual median sale price.
     
     Args:
         data: pandas DataFrame.
@@ -910,10 +910,10 @@ def fit_regression(
         
         # Plot aesthetics
         fig.set_title(
-            "OLS: Predicted vs. Actual Sale Price", fontsize=16, pad=10
+            "OLS: Predicted vs. Actual Median Sale Price", fontsize=16, pad=10
         )
-        fig.set_xlabel("Actual Sale Price ($)", fontsize=12)
-        fig.set_ylabel("Predicted Sale Price ($)", fontsize=12)
+        fig.set_xlabel("Actual Median Sale Price ($)", fontsize=12)
+        fig.set_ylabel("Predicted Median Sale Price ($)", fontsize=12)
         sns.despine(top=True, right=True)
         
         # If user wants to save plot
@@ -1010,10 +1010,10 @@ def fit_glm(
         
         # Plot aesthetics
         fig.set_title(
-            "GLM: Predicted vs. Actual Sale Price", fontsize=16, pad=10
+            "GLM: Predicted vs. Actual Median Sale Price", fontsize=16, pad=10
         )
-        fig.set_xlabel("Actual Sale Price ($)", fontsize=12)
-        fig.set_ylabel("Predicted Sale Price ($)", fontsize=12)
+        fig.set_xlabel("Actual Median Sale Price ($)", fontsize=12)
+        fig.set_ylabel("Predicted Median Sale Price ($)", fontsize=12)
         sns.despine(top=True, right=True)
         
         # If user wants to save plot
@@ -1117,8 +1117,8 @@ def build_svr(
 
         # Plotting correlation line
         sns.regplot(
-            x = y_test,
-            y = y_pred,
+            x = y_test / 1000,
+            y = y_pred / 1000,
             scatter_kws = {
                 "alpha": 0.5,
                 "edgecolor": "black",
@@ -1142,10 +1142,14 @@ def build_svr(
 
         # Setting plot aesthetics
         ax.set_title(
-            "SVR: Actual vs. Predicted Median Sale Price", fontsize=16, pad=10
+            "SVR: Predicted vs. Actual Median Sale Price", fontsize=16, pad=10
         )
-        ax.set_xlabel("Actual Median Sale Price ($)", fontsize=12)
-        ax.set_ylabel("Predicted Median Sale Price ($)", fontsize=12)
+        ax.set_xlabel(
+            "Actual Median Sale Price ($, thousands)", fontsize=12
+        )
+        ax.set_ylabel(
+            "Predicted Median Sale Price ($, thousands)", fontsize=12
+        )
         sns.despine(top=True, right=True)
         
         # If user wants to save plot        
@@ -1262,7 +1266,7 @@ def predict_new_sales(
         # Annotating correlation and p-value
         plt.text(
             x = 0.03,
-            y = 0.88,
+            y = 0.91,
             s = (
                 r"$R^{2} = $" + f"{res_corr:.3f}\n"
                 r"$p = $" + f"{res_pval:.2f}"
@@ -1650,11 +1654,16 @@ def regression_analysis(
         line_kws={"color": "tab:red"}
     )
     plt.title(
-        f"{message} Regression: Predicted vs. Actual Median Sale Price"
+        f"{message} Regression: Predicted vs. Actual Median Sale Price",
+        fontsize = 16,
+        pad = 10
     )
-    plt.xlabel("Actual Data ($, thousands)")
-    plt.ylabel("Predicted Data ($, thousands)")
-    plt.legend()
+    plt.xlabel(
+        "Actual Median Sale Price ($, thousands)", fontsize = 12
+    )
+    plt.ylabel(
+        "Predicted Median Sale Price ($, thousands)", fontsize = 12
+    )
     sns.despine(top=True, right=True)
     
     # If saving the plot
@@ -1806,7 +1815,11 @@ def volumeSales(
     plt.legend(bbox_to_anchor=(1, 1))
     plt.xlabel("Year")
     plt.ylabel("Number of Homes")
-    plt.title("Real Estate Market Trends in Miami (2017-2023)")
+    plt.title(
+        "Real Estate Market Trends in Miami (2017-2023)",
+        fontsize = 16,
+        pad = 10
+    )
     sns.despine(top=True, right=True)
     
     # If saving the plot
@@ -1867,9 +1880,11 @@ def offMarket(
     plt.xlabel("Year")
     plt.title(
         "Annual Average Number of Homes Sold "
-        "\nin Miami Within 1-2 Weeks of Listing"
+        "\nin Miami Within 1-2 Weeks of Listing",
+        fontsize = 16,
+        pad = 10
     )
-    plt.ylabel("Number of Houses Sold")
+    plt.ylabel("Number of Houses Sold", fontsize=12)
     
     # If saving the plot
     if save:
@@ -1936,9 +1951,13 @@ def dynamicPriceDays(
     )
 
     # Plot aesthetics
-    plt.title("Sale Price vs. Days to Close in Miami (2017-2023)")
-    plt.xlabel("Median Sale Price")
-    plt.ylabel("Median Days to Close")
+    plt.title(
+        "Sale Price vs. Days to Close in Miami (2017-2023)",
+        fontsize = 16,
+        pad = 10
+    )
+    plt.xlabel("Median Sale Price", fontsize=12)
+    plt.ylabel("Median Days to Close", fontsize=12)
     ax.grid(True, linestyle="--")
     
     # Moving markers after labels and decreasing space between them
@@ -2051,7 +2070,11 @@ def priceTrend(
     plt.legend(loc='upper left')
     plt.xlabel("Year")
     plt.ylabel("Number of Homes")
-    plt.title("Trends of Price vs. Homes Sold in Miami (2017-2023)")
+    plt.title(
+        "Trends of Price vs. Homes Sold in Miami (2017-2023)",
+        fontsize = 16,
+        pad = 10
+    )
     
     # If saving the plot
     if save:
@@ -2096,9 +2119,13 @@ def comparisonSales(
         )
         
         # Plot aesthetics
-        plt.title("Total Homes Sold vs. Months of Supply")
-        plt.xlabel("Total Homes Sold")
-        plt.ylabel("Months of Supply")
+        plt.title(
+            "Total Homes Sold vs. Months of Supply",
+            fontsize = 16,
+            pad = 10
+        )
+        plt.xlabel("Total Homes Sold", fontsize=12)
+        plt.ylabel("Months of Supply", fontsize=12)
         plt.legend(loc="upper right")
         plt.ylim(-10, 100)
     
@@ -2207,10 +2234,17 @@ def trainRandomForest(
             line_kws={"color": "tab:red"}
         )
         plt.title(
-            "Random Forest: Prediction of Median Sale Price"
+            "Random Forest: Predicted vs. Actual Median Sale Price",
+            fontsize = 16,
+            pad = 10
         )
-        plt.xlabel("Actual Median Sale Price ($, thousands)")
-        plt.ylabel("Predicted Median Sale Price ($, thousands)")
+        plt.xlabel(
+            "Actual Median Sale Price ($, thousands)", fontsize=12
+        )
+        plt.ylabel(
+            "Predicted Median Sale Price ($, thousands)", fontsize=12
+        )
+        sns.despine(top=True, right=True)
         
         # If saving the plot
         if save:
