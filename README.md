@@ -233,18 +233,18 @@ Understanding housing market analysis is of paramount importance, as it allows i
 ### Predictive Analytics
 
 - Various regression analyses and evaluation of performance using train-test splits:
-  - Ordinary Least Squares (OLS) regression
-  - Generalized Linear Model (GLM) regression
-  - Lasso and Ridge regression
-  - Random Forest regression
+  - Ordinary Least Squares (OLS) Regression
+  - Generalized Linear Model (GLM) Regression
+  - Lasso and Ridge Regression
+  - Random Forest Regression
 - Machine learning models and evaluation of performance using train-test splits and 10-fold cross-validation, followed by prediction of new, unseen data and prediction accuracy:
-  - Support Vector regression (SVR)
+  - Support Vector Regression (SVR)
 
 ### Prescriptive Analytics
 
 To better understand market dynamics in Seattle, one can infer useful information from the output of its regression table (shown below). We can see that the variables selected have an adjusted R<sup>2</sup> of 0.944.
 
-![Regression Results](./resources/regression_results.png)
+![Regression Results](./results/seattle/prescriptive/regression_results.png)
 
 - From the results, we can see that transaction **volume** has a meaningful impact on the level of home prices: `total_homes_sold` has a significantly positive effect on Seattle's home price, while the year-over-year (`yoy`) change in total homes sold has a significantly negative effect. This suggests that, although home prices increase alongside total transaction volume, a "surge" in volume would actually lead to a decline in home prices, possibly due to the market being "swamped" by increased supply (i.e., more sellers than buyers).
 - From the results, the level of **distress** in the market negatively impacts home prices. Specifically, `total_homes_sold_with_price_drops` has a significantly negative effect on home prices, and the effect of year-over-year change in total homes sold with price drops is also significantly negative. This suggests a "slippery slope" impact: price cuts coupled with an increase in price cuts, could serve as a "double whammy" for home prices.
