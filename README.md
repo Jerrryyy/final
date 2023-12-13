@@ -18,7 +18,7 @@
 **Assignment**: Final Project (Due December 13th, 2023)
 
 **Date Created**: 2023-11-20, 6:30 pm \
-**Last Modified**: 2023-12-12, 8:06 pm
+**Last Modified**: 2023-12-12, 8:33 pm
 
 <hr>
 
@@ -49,6 +49,9 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 <hr>
 
 ## Project Structure
+
+<details>
+  <summary>Click to expand project hierarchy</summary>
 
 ```bash
 📦final
@@ -146,6 +149,9 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
     +-- 📷top10.png
     +-- 📄all_results.pdf
 ```
+
+  </summary>
+</details>
 
 <hr>
 
@@ -248,6 +254,6 @@ To better understand market dynamics in Seattle, one can infer useful informatio
   - An interesting question arises: How can one reconcile the observations from the first and second point? The key takeaway is that housing prices benefit from stable availability of housing supply (which is measured by year-over-year change in total inventory). However, a sudden shock in new supply, which is measured by new listings during each time period (1-week in our analyzed dataset), causes a contemporaneous negative shock to home prices.
 - **Policy recommendation**: Given the backdrop in this analysis, policy recommendations should be two-fold. Policy should be aimed at improving affordability and maintaining home price stability. Therefore, Seattle should continue to expand available housing, increasing housing supply at a gradual pace, while closely monitoring any abnormal activity in particular areas of the market to avoid potential shocks to the system (either excessive aging of inventory, excessive popularity of certain cohorts, or sudden supply shocks). Furthermore, the city should also construct more buyer-friendly assistance programs, such as initiatives that provide lower cost loans for first-time homebuyers and deeper collaborations with banks and non-bank lenders to better understand the city's evolving demographics. The initiatives should be designed with the purpose to help boost transaction volumes, and serve as a good matching mechanism to help different buyers with different needs find appropriate homes.
 
-Prescriptive analytics for Miami can be found in [📄miami_summary.pdf](./resources/miami_summary.pdf), which includes an overview of all analyses done on the Miami housing market.
+Prescriptive analytics for Miami can be found in [📄all_results.pdf](./resources/all_results.pdf), which includes an overview of all analyses done on the Miami housing market.
 
 [Redfin]: https://www.redfin.com/news/data-center/
