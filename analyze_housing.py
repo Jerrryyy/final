@@ -14,7 +14,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-12, 6:47 pm
+# Last Modified: 2023-12-12, 8:15 pm
 
 # File Description:
 
@@ -428,7 +428,7 @@ def main():
     )
     
     # Saving SVR model to a pickle file
-    pickle_me("./results/nyc/diagnostic/svr_nyc.pickle", model=svr_nyc)
+    pickle_me("./results/nyc/predictive/svr_nyc.pickle", model=svr_nyc)
     print("SVR model saved to results/nyc/predictive/svr_nyc.pickle")
     
     # SVR model for all three cities
@@ -479,53 +479,18 @@ def main():
         path = "./results/nyc/predictive/predictions.svg"
     )["coefs"]
     
-    
-    # Prescriptive analytics ----
-    print(
-        "---------------------------------------------------------------"
-        "\nSaving prescriptive analytics to /results/..."
-    )
-    
-    # Displaying only positively-weighted features of the SVR model
-    print(
-        "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-        "\nSupport vector regression of New York City used the following:"
-    )
-    n_coefs = len(coefs)
-    n_pos_coefs = len(coefs.query("Coefficient > 0"))
-    pos_coefs = zip(
-        coefs.query("Coefficient > 0").index,
-        coefs.query("Coefficient > 0")["Coefficient"]
-    )
-    print(
-        f"\n{n_coefs} features, of which only {n_pos_coefs} were "
-        "positively-weighted "
-        "\nin terms of predicting median sales price:"
-    )
-    for i, coef in enumerate(pos_coefs, start=1):
-        print(f"{i}. {coef[0]}: {coef[1]:.2f}")
-    
-    # Again, downloading pre-generated figure from my third weekly update
-    # notebook, at the end of Jerry's Analyses, since pd.styler objects cannot
-    # be displayed in terminal.
-    download(
-        "https://drive.google.com/uc?id=1T94gpeNfBsrDzdnxXTCUxvx5kAxk8SO5",
-        output = "./results/nyc/prescriptive/coefficients.svg",
-        quiet = True
-    )
-    
     # Lasso and Ridge regression of median sale price in Seattle
     lasso = regression_analysis(
         data["seattle_k"],
         "l",
         save = True,
-        path = "./results/seattle/prescriptive/lasso.svg"
+        path = "./results/seattle/predictive/lasso.svg"
     )
     ridge = regression_analysis(
         data["seattle_k"],
         "r",
         save = True,
-        path = "./results/seattle/prescriptive/ridge.svg"
+        path = "./results/seattle/predictive/ridge.svg"
     )
     better = "Lasso" if lasso > ridge else "Ridge"
     
@@ -553,6 +518,50 @@ def main():
         path = "./results/miami/prescriptive/forest.svg"
     )
     
+    
+    # Prescriptive analytics ----
+    print(
+        "---------------------------------------------------------------"
+        "\nSaving prescriptive analytics to /results/..."
+    )
+    
+    # Displaying only positively-weighted features of the SVR model
+    print(
+        "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        "\nSupport vector regression of New York City used the following:"
+    )
+    n_coefs = len(coefs)
+    n_pos_coefs = len(coefs.query("Coefficient > 0"))
+    pos_coefs = zip(
+        coefs.query("Coefficient > 0").index,
+        coefs.query("Coefficient > 0")["Coefficient"]
+    )
+    print(
+        f"\n{n_coefs} features, of which only {n_pos_coefs} were "
+        "positively-weighted "
+        "\nin terms of predicting median sales price:"
+    )
+    for i, coef in enumerate(pos_coefs, start=1):
+        print(f"{i}. {coef[0]}: {coef[1]:.2f}")
+    
+    # Downloading pre-generated figure for Kai's prescriptive analysis of
+    # Seattle. Code for figure is under Kai's Analyses in my third weekly
+    # update notebook.
+    download(
+        "https://drive.google.com/uc?id=1i9jMrZJhmYLykBMABJJ0QVBIXa31lGB8",
+        output = "./results/seattle/prescriptive/regression_results.png",
+        quiet = True
+    )
+    
+    # Again, downloading pre-generated figure from my third weekly update
+    # notebook, at the end of Jerry's Analyses, since pd.styler objects cannot
+    # be displayed in terminal.
+    download(
+        "https://drive.google.com/uc?id=1T94gpeNfBsrDzdnxXTCUxvx5kAxk8SO5",
+        output = "./results/nyc/prescriptive/coefficients.png",
+        quiet = True
+    )
+
     # Final status message
     print(
         "---------------------------------------------------------------"

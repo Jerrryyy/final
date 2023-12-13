@@ -18,7 +18,7 @@
 **Assignment**: Final Project (Due December 13th, 2023)
 
 **Date Created**: 2023-11-20, 6:30 pm \
-**Last Modified**: 2023-12-12, 6:46 pm
+**Last Modified**: 2023-12-12, 8:06 pm
 
 <hr>
 
@@ -69,7 +69,7 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 |   |   +--📊svr.svg
 |   |   +--📚anova.csv
 |   |   +--📚post_hoc.csv
-|   |   +--🧠svr_all.pickle
+|   |   +--🥒svr_all.pickle
 |   |
 |   +== 📂nyc
 |   |   +== 📂descriptive
@@ -84,14 +84,14 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 |   |   +== 📂diagnostic
 |   |   |   +-- 📊glm.svg
 |   |   |   +-- 📊multicollinearity.svg
-|   |   |   +-- 🧠svr_nyc.pickle
 |   |   |
 |   |   +== 📂predictive
 |   |   |   +-- 📊predictions.svg
 |   |   |   +-- 📊svr.svg
+|   |   |   +-- 🥒svr_nyc.pickle
 |   |   |
 |   |   +== 📂prescriptive
-|   |       +-- 📊coefficients.svg
+|   |       +-- 📊coefficients.png
 |   |
 |   +== 📂seattle
 |   |   +== 📂descriptive
@@ -105,11 +105,12 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 |   |   |   +-- 📊correlations.svg
 |   |   |
 |   |   +== 📂predictive
+|   |   |   +-- 📊lasso.svg
+|   |   |   +-- 📊ridge.svg
 |   |   |   +-- 📊svr.svg
 |   |   |
 |   |   +== 📂prescriptive
-|   |       +-- 📊lasso.svg
-|   |       +-- 📊ridge.svg
+|   |       +-- 📊regression_results.png
 |   |
 |   +== 📂miami
 |       +== 📂descriptive
@@ -137,12 +138,13 @@ If the video does not work, it can be found in [`📂resources`](./resources/) a
 |
 +== 📂resources
     +-- 🆘example.mp4
-    +-- 🆘flowchart.png
+    +-- 🆘flowchart.svg
     +-- 📷coefficients.png
     +-- 📷divergence.svg
     +-- 📷heatmaps.svg
-    +-- 📷regression_results.png
+    +-- 📷terminal_output.png
     +-- 📷top10.png
+    +-- 📄all_results.pdf
 ```
 
 <hr>
