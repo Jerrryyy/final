@@ -14,7 +14,7 @@
 # Specialization: Neurosurgery, Artificial Intelligence, Epigenetics
 
 # Date Created: 2023-12-08, 3:56 am
-# Last Modified: 2023-12-12, 8:15 pm
+# Last Modified: 2023-12-12, 8:59 pm
 
 # File Description:
 
@@ -277,6 +277,7 @@ def main():
     # OLS and GLMs to see impact of each variable on median sales price
     ols_results = fit_regression(
         nyc_ols,
+        plot = True,
         save = True,
         path = "./results/nyc/diagnostic/ols.svg"
     )
