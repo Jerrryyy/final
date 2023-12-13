@@ -138,7 +138,7 @@ def main():
         "\nSaving descriptive analytics to /results/..."
     )
     
-    # Saving list of top 10 cities with highest median sales price
+    # Saving list of top 10 cities with highest median sale price
     # Since this uses the ENTIRE 3.5 GB dataset, it is instead downloaded from
     # a pre-generated figure from our weekly update notebook to significantly
     # reduce script runtime. The code for generating the figure is also
@@ -245,7 +245,7 @@ def main():
         "\nSaving diagnostic analytics to /results/..."
     )
     
-    # A few variables that highly correlated with median sales price were saved
+    # A few variables that highly correlated with median sale price were saved
     # from Kai's first week update heatmaps. These are then plotted against
     # each other to see multicollinearity for ordinary least squares (OLS)
     # regression. # However, functions are also coded to be able to analyze ALL
@@ -274,7 +274,7 @@ def main():
         path = "./results/all_cities/post_hoc.csv"
     )
     
-    # OLS and GLMs to see impact of each variable on median sales price
+    # OLS and GLMs to see impact of each variable on median sale price
     ols_results = fit_regression(
         nyc_ols,
         plot = True,
@@ -368,7 +368,7 @@ def main():
         quiet = True
     )
     
-    # Relationship between median sales price and days to close in Miami
+    # Relationship between median sale price and days to close in Miami
     dynamicPriceDays(
         miami_nargiz,
         save = True,
@@ -382,7 +382,7 @@ def main():
         path = "./results/miami/diagnostic/distributions.svg"
     )
     
-    # Annual median sales price compared to total homes sold
+    # Annual median sale price compared to total homes sold
     priceTrend(
         miami_nargiz,
         save = True,
@@ -458,10 +458,10 @@ def main():
             path = f"./results/{city}/predictive/svr.svg"
         )
     
-    # Predicting median sales prices for new NYC entries after August 2023
+    # Predicting median sale prices for new NYC entries after August 2023
     print(
         "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-        "\nPredicting median sales prices for new entries "
+        "\nPredicting median sale prices for new entries "
         "\nafter August 2023 in New York City:"
         "\n\nPrediction Accuracy:"
     )
@@ -498,7 +498,7 @@ def main():
     # Printing comparison of results
     print(
         "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-        "\nLasso and Ridge regression of median sales price in Seattle:"
+        "\nLasso and Ridge regression of median sale price in Seattle:"
         f"\n\nAfter fitting both models, the {better} "
     )
     if better == "Lasso":
@@ -509,7 +509,7 @@ def main():
     # Random forest regressor of median sale price in Miami
     print(
         "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-        "\nRandom forest regression of median sales price in Miami:\n"
+        "\nRandom forest regression of median sale price in Miami:\n"
     )
     trainRandomForest(
         miami_nargiz,
@@ -540,7 +540,7 @@ def main():
     print(
         f"\n{n_coefs} features, of which only {n_pos_coefs} were "
         "positively-weighted "
-        "\nin terms of predicting median sales price:"
+        "\nin terms of predicting median sale price:"
     )
     for i, coef in enumerate(pos_coefs, start=1):
         print(f"{i}. {coef[0]}: {coef[1]:.2f}")
